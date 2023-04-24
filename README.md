@@ -19,11 +19,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [milestone-books] <a name="about-project"></a>
+# 📖 [Awesome-books] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[milestone-books]** is a basic website that allows users to add/remove books from a list
+**[Awesome-books]** is a basic website that allows users to add/remove books from a list
 
 ## 🛠 Built With <a name="built-with"></a>
 - **[Html]**
@@ -34,10 +32,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **[Plain_JS_with_objects]**
-- **[Plain_JS_with_classes]**
+- **[Add_Books_To_List]**
 - **[Create_a_complete_website_with_navigation]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -46,8 +42,6 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
 - [Live Demo Link](Not yet available)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -55,7 +49,6 @@
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
 
 To get a local copy up and running, follow these steps.
 1. Download the zip file or clone with this command `git clone https://github.com/til2to/milestone-books.git`(Make sure you have `Git installed` in your Computer or Install it by following [these steps](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
@@ -68,13 +61,11 @@ To get a local copy up and running, follow these steps.
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Sungabanja Thawethe**
 
-👤 **Rose Mutai**
-
-- GitHub: [@githubhandle](https://github.com/rosemutai)
-- Twitter: [@twitterhandle](https://twitter.com/__chepngetich__)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rosemutai)
+- GitHub: [@sunga12](https://github.com/sunga12)
+- Twitter: [@OfficialAseT](https://twitter.com/OfficialAseT)
+- LinkedIn: [Sungabanja Thawethe](https://www.linkedin.com/in/sungabanja-thawethe-b3419b142/)
 
 👤 **Owusu Dennis**
 
@@ -89,8 +80,8 @@ To get a local copy up and running, follow these steps.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
-- **[Create_a_complete_website_with_navigation]**
+- **[Plain_JS_with_classes]**
+- **[A_complete_website_with_navigation]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +91,7 @@ To get a local copy up and running, follow these steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/til2to/milestone-books/issues).
+Feel free to check the [issues page](https://github.com/sunga12/Awesome-books/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,9 +107,8 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
-I would like to thank my coding partners to support me when I got stuck and my code reviewers for the advice.
+I would like to thank my coding partner for the support when I got stuck and my code reviewers for the advice.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
