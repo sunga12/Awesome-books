@@ -1,70 +1,71 @@
-const books = document.querySelector('.books');
-const form = document.querySelector('.form');
-const title = document.getElementById('title');
-const author = document.getElementById('author');
+class BookList {
+  form = document.querySelector('.form');
 
-let localStorage = JSON.parse(window.localStorage.getItem('allBooks'));
-if (localStorage === null || localStorage === undefined || localStorage.length === 0) {
-  localStorage = [];
-}
+  bookBtns = document.querySelectorAll('.remove');
 
-// create array []
-let allBooks = localStorage;
+  constructor() {
+    this.title = document.getElementById('title');
+    this.author = document.getElementById('author');
+    this.newBooks = document.querySelector('.books');
+    this.storage = JSON.parse(window.localStorage.getItem('allBooks')) || [];
+    this.allBooks = this.storage;
 
-allBooks.forEach((book, index) => {
-  const displayBook = `
-<div class="book">
-  <p class="book-title">Title: ${book.title}</p>
-  <p class="book-author">Author: ${book.author}</p>
-  <button class="remove" id=${index}>Remove</button>
-</div>
-`;
-  books.innerHTML += displayBook;
-});
+    this.storage.forEach((book, index) => {
+      const displayBook = `
+      <div class="book-container">
+      <div class="title-author">
+      <p class="book">"${book.title}" by ${book.author} </p>
+      </div>
+        <button class="remove" id=${index}>Remove</button>
+      </div>
+      `;
+      this.newBooks.innerHTML += displayBook;
+    });
+    this.bookBtns = document.querySelectorAll('.remove');
+  }
 
-// function to compare books to see if a new book already exists
-const bookExist = (existingTitle,
-  newTitle) => JSON.stringify(existingTitle) === JSON.stringify(newTitle);
+  // function to compare incoming and existing book
+  bookExist = (existiingTitle,
+    newTitle) => JSON.stringify(existiingTitle) === JSON.stringify(newTitle);
 
-/* add book */
-const addBook = () => {
-  const newBook = {
-    title: title.value,
-    author: author.value,
-  };
-  /* check if book exist */
-  let exist = false;
-  localStorage.forEach((book) => {
-    if (bookExist(book.title, title.value)) {
-      exist = true;
+  /* add book */
+  addBook() {
+    /* check if book exist */
+    let exist = false;
+    this.allBooks.forEach((book) => {
+      if (this.bookExist(book.title, this.title.value)) {
+        exist = true;
+      }
+    });
+
+    /* add book if it doesn't exist already */
+    if (exist === false) {
+      this.allBooks.unshift({ title: this.title.value, author: this.author.value });
+      window.localStorage.setItem('allBooks', JSON.stringify(this.storage));
+      window.location.reload();
     }
-  });
+  }
 
-  /* Dont add if book exist */
-  if (exist) return;
-
-  /* add book if it doesn't exist */
-  allBooks.unshift(newBook);
-  window.localStorage.setItem('allBooks', JSON.stringify(localStorage));
-  window.location.reload();
-};
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  addBook();
-});
-
-/* remove book */
-function remove(buttonId) {
-  allBooks = localStorage.filter((book, index) => index !== buttonId);
-  window.localStorage.setItem('allBooks', JSON.stringify(allBooks));
-  window.location.reload();
+  /* remove book */
+  remove(buttonId) {
+    this.allBooks = this.allBooks.filter((book, index) => index !== buttonId);
+    window.localStorage.setItem('allBooks', JSON.stringify(this.allBooks));
+    window.location.reload();
+  }
 }
 
-const bookBtns = document.querySelectorAll('.remove');
-bookBtns.forEach((bookBtn) => {
+/* eslint-disable */
+const freshBook = new BookList();
+
+freshBook.form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  freshBook.addBook("title", "author");
+});
+
+/* compare and remove */
+freshBook.bookBtns.forEach((bookBtn) => {
   bookBtn.addEventListener('click', (e) => {
     const buttonId = parseInt(e.target.getAttribute('id'), 10);
-    remove(buttonId);
+    freshBook.remove(buttonId);
   });
 });
