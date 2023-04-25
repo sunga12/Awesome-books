@@ -1,11 +1,12 @@
 class BookList {
   form = document.querySelector('.form');
+
   bookBtns = document.querySelectorAll('.remove');
-  
+
   constructor() {
     this.title = document.getElementById('title');
     this.author = document.getElementById('author');
-    this.newBooks = document.querySelector('.new-books-container');
+    this.newBooks = document.querySelector('.books');
     this.storage = JSON.parse(window.localStorage.getItem('allBooks')) || [];
     this.allBooks = this.storage;
 
@@ -13,9 +14,7 @@ class BookList {
       const displayBook = `
       <div class="book-container">
       <div class="title-author">
-      <p class="book-title">"${book.title}"</p>
-      <p>by</p>
-      <p class="book-author">${book.author}</p>
+      <p class="book">"${book.title}" by ${book.author} </p>
       </div>
         <button class="remove" id=${index}>Remove</button>
       </div>
@@ -28,9 +27,9 @@ class BookList {
   // function to compare incoming and existing book
   bookExist = (existiingTitle,
     newTitle) => JSON.stringify(existiingTitle) === JSON.stringify(newTitle);
-  
+
   /* add book */
-  addBook = (title, author) => {
+  addBook() {
     /* check if book exist */
     let exist = false;
     this.allBooks.forEach((book) => {
@@ -48,14 +47,14 @@ class BookList {
   }
 
   /* remove book */
-  remove = (buttonId) => {
+  remove(buttonId) {
     this.allBooks = this.allBooks.filter((book, index) => index !== buttonId);
     window.localStorage.setItem('allBooks', JSON.stringify(this.allBooks));
     window.location.reload();
   }
 }
 
- /* eslint-disable */
+/* eslint-disable */
 const freshBook = new BookList();
 
 freshBook.form.addEventListener('submit', (e) => {

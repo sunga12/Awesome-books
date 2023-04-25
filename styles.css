@@ -2,3 +2,14 @@
   padding: 0;
   margin: 0.5rem;
 }
+
+.books {
+  border: 2px solid black;
+  background-color: rgb(178, 177, 177);
+  width: 50%;
+}
+
+.book-container {
+  display: flex;
+  justify-content: space-between;
+}
