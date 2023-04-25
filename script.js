@@ -68,3 +68,12 @@ bookBtns.forEach((bookBtn) => {
     remove(buttonId);
   });
 });
+
+
+//
+// create book class
+// constructor - title, author
+// remove book method
+
+ 
+// 
