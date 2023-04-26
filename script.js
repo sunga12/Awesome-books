@@ -1,3 +1,29 @@
+const list = document.getElementById('list');
+const addNew = document.querySelector('.a-n');
+const conTact = document.getElementById('contact-link');
+
+const listOfBooks = document.querySelector('.book-list');
+const addANewBook = document.querySelector('.add-new');
+const contactSection = document.querySelector('.contact');
+
+list.addEventListener('click', () => {
+  addANewBook.style.display = 'none';
+  listOfBooks.style.display = 'block';
+  contactSection.style.display = 'none';
+});
+
+addNew.addEventListener('click', () => {
+  addANewBook.style.display = 'block';
+  listOfBooks.style.display = 'none';
+  contactSection.style.display = 'none';
+});
+
+conTact.addEventListener('click', () => {
+  addANewBook.style.display = 'none';
+  listOfBooks.style.display = 'none';
+  contactSection.style.display = 'block';
+});
+
 class BookList {
   form = document.querySelector('.form');
 
