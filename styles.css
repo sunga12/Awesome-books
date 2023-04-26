@@ -11,15 +11,16 @@ header {
   padding: 0 1%;
 }
 
-/* nav {
-  border: 1px solid blue;
-} */
-
 ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
   margin: 0;
+}
+
+.date {
+  margin-top: 10px;
+  text-align: right;
 }
 
 .a-n {
@@ -40,10 +41,6 @@ h2 {
   text-align: center;
 }
 
-.book-list {
-  /* display: none; */
-}
-
 .add-new {
   display: none;
 }
@@ -54,7 +51,7 @@ h2 {
 
 .books {
   border: 2px solid black;
-  background-color: rgb(178, 177, 177);
+  /* background-color: rgb(178, 177, 177); */
   width: 100%;
   margin: 1rem auto;
 }
@@ -62,6 +59,14 @@ h2 {
 .book-container {
   display: flex;
   justify-content: space-between;
+}
+
+.book-container:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.book-container:nth-child(even) {
+  background-color: white;
 }
 
 .add-book-form {
@@ -81,5 +86,7 @@ input {
 footer {
   margin: 0 auto;
   border: 1px solid black;
-  padding: 0 1%;
+  position: absolute;
+  bottom: 0;
+  width: 97%;
 }

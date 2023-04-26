@@ -24,9 +24,25 @@ conTact.addEventListener('click', () => {
   contactSection.style.display = 'block';
 });
 
+const clock=document.querySelector('.date') 
+
+const timeNow = () => {
+  let today = new Date().toLocaleDateString('en-GB', {
+  day : 'numeric',
+  month : 'short',
+  year : 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',}).split(' ').join(' ');
+  clock.innerHTML = today;
+};
+
+setInterval(() => {
+  timeNow();
+}, 1000);
+
 class BookList {
   form = document.querySelector('.form');
-
   bookBtns = document.querySelectorAll('.remove');
 
   constructor() {
