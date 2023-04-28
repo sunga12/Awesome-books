@@ -32,9 +32,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Plain_JS_with_objects]**
 - **[Add_Books_To_List]**
-- **[Create_a_complete_website_with_navigation]**
+- **[Complete_website_with_navigation]**
+- **[Contact-Page]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -42,7 +43,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](Not yet available)
+- [Awesome Book Library](https://sunga12.github.io/Awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -51,7 +52,7 @@
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
-1. Download the zip file or clone with this command `git clone https://github.com/til2to/milestone-books.git`(Make sure you have `Git installed` in your Computer or Install it by following [these steps](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
+1. Download the zip file or clone with this command `git clone https://github.com/sunga12/Awesome-books.git`(Make sure you have `Git installed` in your Computer or Install it by following [these steps](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
 2. `Awesome-Books`
 3. Open it with the live server
 
@@ -71,7 +72,7 @@ To get a local copy up and running, follow these steps.
 
 - GitHub: [@githubhandle](https://github.com/til2to)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/dennis-owusu-835888206/
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/dennis-owusu-835888206/)
 )
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -80,8 +81,8 @@ To get a local copy up and running, follow these steps.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **[Plain_JS_with_classes]**
-- **[A_complete_website_with_navigation]**
+- **[Contact Form]**
+- **[Additional Styling]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
