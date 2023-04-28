@@ -1,3 +1,47 @@
+const list = document.getElementById('list');
+const addNew = document.querySelector('.a-n');
+const conTact = document.getElementById('contact-link');
+
+const listOfBooks = document.querySelector('.book-list');
+const addANewBook = document.querySelector('.add-new');
+const contactSection = document.querySelector('.contact');
+
+list.addEventListener('click', () => {
+  addANewBook.style.display = 'none';
+  listOfBooks.style.display = 'block';
+  contactSection.style.display = 'none';
+});
+
+addNew.addEventListener('click', () => {
+  addANewBook.style.display = 'block';
+  listOfBooks.style.display = 'none';
+  contactSection.style.display = 'none';
+});
+
+conTact.addEventListener('click', () => {
+  addANewBook.style.display = 'none';
+  listOfBooks.style.display = 'none';
+  contactSection.style.display = 'block';
+});
+
+const clock = document.querySelector('.date');
+
+const timeNow = () => {
+  const today = new Date().toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }).split(' ').join(' ');
+  clock.innerHTML = today;
+};
+
+setInterval(() => {
+  timeNow();
+}, 1000);
+
 class BookList {
   form = document.querySelector('.form');
 
